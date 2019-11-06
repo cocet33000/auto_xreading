@@ -1,4 +1,5 @@
 import time
+import os
 
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -19,6 +20,8 @@ def scroll_end(driver):
                 match=True
 
 
+username = os.environ["xreading_username"]
+password = os.environ["xreading_password"]
 
 words = int(input('words?'))
 speed = int(input('speed?'))
@@ -51,10 +54,10 @@ login_URL = 'https://xreading.com/'
 driver.get(login_URL)
 
 username = driver.find_element_by_id('UserUsername')
-username.send_keys("okamoto.takumi.or7@is.naist.jp")
+username.send_keys(username)
 
 password = driver.find_element_by_id('UserPassword')
-password.send_keys("1811051")
+password.send_keys(password)
 
 signin = driver.find_element_by_id('SignInButton')
 signin.submit()
