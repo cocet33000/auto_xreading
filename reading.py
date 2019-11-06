@@ -20,15 +20,15 @@ def scroll_end(driver):
                 match=True
 
 
-username = os.environ["xreading_username"]
-password = os.environ["xreading_password"]
+my_username = os.environ["xreading_username"]
+my_password = os.environ["xreading_password"]
 
 words = int(input('words?'))
 speed = int(input('speed?'))
 URL = input('URL?')
 
 minute = words//speed
-print('time', minute)
+print('start')
 
 # 2.操作するページを開く
 driver = webdriver.Chrome('Selenium/chromedriver')
@@ -54,10 +54,10 @@ login_URL = 'https://xreading.com/'
 driver.get(login_URL)
 
 username = driver.find_element_by_id('UserUsername')
-username.send_keys(username)
+username.send_keys(my_username)
 
 password = driver.find_element_by_id('UserPassword')
-password.send_keys(password)
+password.send_keys(my_password)
 
 signin = driver.find_element_by_id('SignInButton')
 signin.submit()
@@ -67,14 +67,14 @@ driver.get(URL)
 
 while True:
     try:
-        wait = WebDriverWait(driver, 30) # 最大10秒
+        wait = WebDriverWait(driver, 30) # 最大30秒
 
         scroll_end(driver)
 
         elem = wait.until( expected_conditions.element_to_be_clickable( (By.ID,"myNxtBtn")) )
         elem.click()
     except:
-        wait = WebDriverWait(driver, 30) # 最大10秒
+        wait = WebDriverWait(driver, 30) # 最大30秒
 
         scroll_end(driver)
 
