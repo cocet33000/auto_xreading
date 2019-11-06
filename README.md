@@ -10,8 +10,7 @@ Xreadingをgoogle chromeで自動実行します。
 
 ## 準備
 1. auto直下にSeleniumフォルダを作成
-2. 使用するOSとchromeのverとあったchromedriverをダウンロードし1.で作成したフォルダに入れる
-  1. link(https://chromedriver.chromium.org/downloads)
+2. 使用するOSとchromeのverとあったchromedriverをダウンロードして1.で作成したフォルダに入れる(https://chromedriver.chromium.org/downloads)
 3. python3環境にて　`pip install selenium`
 4. 環境変数にxreading_usernameとxreading_passwordを追加
 
