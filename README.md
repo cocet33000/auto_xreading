@@ -1,7 +1,7 @@
-Name
+Auto Xreading
 ====
 
-Overview
+Xreadingを自動化します。
 
 ## Description
 
