@@ -20,7 +20,7 @@ def scroll_end(driver):
                 match=True
 
 
-if if __name__ == "__main__":
+if __name__ == "__main__":
     # 環境変数からXreadingアカウントの情報を受け取る
     my_username = os.environ["xreading_username"]
     my_password = os.environ["xreading_password"]
