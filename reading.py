@@ -38,6 +38,8 @@ if __name__ == "__main__":
     # 操作するページを開く
     driver = webdriver.Chrome('Selenium/chromedriver')
     driver.get(URL)
+    # タブのタイムアウトを防ぐ
+    driver.execute_script('javascript:autoclose_booksbyuesrs = function(){console.log("hoge")}')
 
     # 60タブ開く(10分程度経過する)
     for i in range(60):
@@ -45,6 +47,9 @@ if __name__ == "__main__":
         driver.execute_script("window.open()") #make new tab
         driver.switch_to.window(driver.window_handles[i+1]) #switch new tab
         driver.get(URL)
+        time.sleep(0.5)
+        # タブのタイムアウトを防ぐ
+        driver.execute_script('javascript:autoclose_booksbyuesrs = function(){console.log("hoge")}')
 
     # 経過時間に合わせてスリープ
     if minute < 10:
