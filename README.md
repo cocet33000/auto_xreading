@@ -4,7 +4,7 @@ Auto Xreading
 Xreading を google chrome で自動実行します。(たまに失敗します)
 
 ## Requirement
-- python3
+- python3.8
   - selenium
 - chromedriver
 
@@ -21,3 +21,4 @@ Xreading を google chrome で自動実行します。(たまに失敗します)
 ## 実行
 - chrome で Xreading を開き、任意の本を読み始め、URLをコピー
 - `python reading.py` を実行し、word数、読む速さ(words/min)、URLを入力
+- -only read で時間経過0で実行
